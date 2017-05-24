@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/atomist-seeds/spring-rest-seed.svg?branch=master)](https://travis-ci.org/atomist-seeds/spring-rest-seed)
 [![Slack Status](https://join.atomist.com/badge.svg)](https://join.atomist.com)
 
-This project contains a [Spring Boot](boot)[REST](rest) service for Seed for creating Spring REST services.
+This project contains a [Spring Boot](boot) [REST](rest) service for Seed for creating Spring REST services.
 
 [boot]: https://projects.spring.io/spring-boot/
 [rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
