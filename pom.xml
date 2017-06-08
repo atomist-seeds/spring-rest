@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.atomist.springteam</groupId>
     <artifactId>spring-rest-seed</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>spring-rest-seed</name>
     <description>Seed for creating Spring REST services</description>
