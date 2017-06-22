@@ -17,8 +17,7 @@ function err() {
 function main() {
     if [[ $TRAVIS_EVENT_TYPE != cron ]]; then
         msg "not updating in non-cron Travis CI build"
-        msg "continuing while testing FIXME uncomment return"
-        # return 0
+        return 0
     fi
 
     msg "building original project"
