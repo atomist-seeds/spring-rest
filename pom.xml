@@ -7,7 +7,7 @@
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>spring-rest-seed</name>
-    <description>Seed for creating Spring REST services</description>
+    <description>Seed for Spring Boot REST services</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
