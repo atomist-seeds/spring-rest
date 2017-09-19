@@ -28,8 +28,8 @@ function main() {
     fi
 
     msg "downloading starter project zip"
-    local start_url='http://start.spring.io/starter.zip?type=maven-project&language=java&baseDir=spring-rest-seed&groupId=com.atomist.springteam&artifactId=spring-rest-seed&name=spring-rest-seed&description=Seed+for+Spring+Boot+REST+services&packageName=com.atomist.springteam.springrestseed&packaging=jar&javaVersion=1.8&generate-project=&style=web&style=actuator'
     local seed_name=spring-rest-seed
+    local start_url="http://start.spring.io/starter.zip?type=maven-project&language=java&baseDir=$seed_name&groupId=com.atomist&artifactId=$seed_name&name=$seed_name&description=Seed+for+Spring+Boot+REST+services&packageName=com.atomist.spring&packaging=jar&javaVersion=1.8&generate-project=&style=web&style=actuator"
     local zip=$seed_name.zip
     local target_dir=target
     if ! curl -v -o "$target_dir/$zip" "$start_url"; then
@@ -132,7 +132,7 @@ function main() {
         err "failed to add modified files to git index"
         return 1
     fi
-    if ! git commit -m "Update spring-rest-seed from start.spring.io"; then
+    if ! git commit -m "Update $seed_name from start.spring.io"; then
         err "failed to commit updates"
         return 1
     fi
@@ -143,7 +143,7 @@ function main() {
     fi
     local remote=origin
     if [[ $GITHUB_TOKEN ]]; then
-        remote=https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG
+        remote=https://$GITHUB_TOKEN:x-oauth-basic@github.com/$TRAVIS_REPO_SLUG.git
     fi
 
     if [[ $TRAVIS_BRANCH != master ]]; then
