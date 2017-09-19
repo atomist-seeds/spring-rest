@@ -1,4 +1,4 @@
-package com.atomist.springteam.springrestseed;
+package com.atomist.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
