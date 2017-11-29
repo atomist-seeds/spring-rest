@@ -76,16 +76,11 @@ function main() {
     done
 
     local dirty
-    for diff_opt in "" "--cached"; do
-        dirty=$(git diff --shortstat $diff_opt 2> /dev/null)
-        if [[ $? -ne 0 ]]; then
-            err "failed to determine git diff status"
-            return 1
-        fi
-        if [[ $dirty ]]; then
-            break
-        fi
-    done
+    dirty=$(git status --porcelain 2> /dev/null)
+    if [[ $? -ne 0 ]]; then
+        err "failed to determine git status"
+        return 1
+    fi
     if [[ ! $dirty ]]; then
         msg "no changes detected"
         return 0
