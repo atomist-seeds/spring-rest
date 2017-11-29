@@ -4,7 +4,7 @@
 set -o pipefail
 
 declare Pkg=travis-build-spring-update
-declare Version=0.2.0
+declare Version=0.3.0
 
 function msg() {
     echo "$Pkg: $*"
@@ -17,7 +17,8 @@ function err() {
 function main() {
     if [[ $TRAVIS_EVENT_TYPE != cron ]]; then
         msg "not updating in non-cron Travis CI build"
-        return 0
+        # return 0
+        msg "FIXME: continuing for testing"
     fi
 
     msg "building original project"
@@ -62,6 +63,17 @@ function main() {
         fi
     done
     rm -rf "$seed_dir"{,.zip}
+
+    msg "applying patches"
+    local patch
+    for patch in .travis/*.patch; do
+        if [[ -f $patch ]]; then
+            if ! patch -p1 < "$patch"; then
+                err "failed to apply patch: $patch"
+                return 1
+            fi
+        fi
+    done
 
     local dirty
     for diff_opt in "" "--cached"; do
