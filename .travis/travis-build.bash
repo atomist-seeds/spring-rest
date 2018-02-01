@@ -4,7 +4,7 @@
 set -o pipefail
 
 declare Pkg=travis-build-spring-update
-declare Version=0.3.0
+declare Version=0.4.0
 
 function msg() {
     echo "$Pkg: $*"
@@ -15,16 +15,16 @@ function err() {
 }
 
 function main() {
-    if [[ $TRAVIS_EVENT_TYPE != cron ]]; then
-        msg "not updating in non-cron Travis CI build"
-        return 0
-    fi
-
     msg "building original project"
     local mvn="./mvnw -B -V -U"
     if ! $mvn package; then
         err "failed to package unaltered source"
         return 1
+    fi
+
+    if [[ $TRAVIS_EVENT_TYPE != cron ]]; then
+        msg "not updating in non-cron Travis CI build"
+        return 0
     fi
 
     msg "downloading starter project zip"
