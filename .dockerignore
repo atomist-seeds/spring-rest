@@ -1,0 +1,6 @@
+.git*
+.travis*
+.idea/
+*.iml
+README.md
+target/
