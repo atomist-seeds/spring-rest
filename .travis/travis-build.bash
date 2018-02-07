@@ -67,7 +67,7 @@ function main() {
     local patch
     for patch in .travis/*.patch; do
         if [[ -f $patch ]]; then
-            if ! patch -p1 < "$patch"; then
+            if ! patch --batch -p1 < "$patch"; then
                 err "failed to apply patch: $patch"
                 return 1
             fi
