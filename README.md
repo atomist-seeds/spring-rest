@@ -1,7 +1,5 @@
 # spring-rest-seed
 
-[![Build Status](https://travis-ci.org/atomist-seeds/spring-rest-seed.svg?branch=master)](https://travis-ci.org/atomist-seeds/spring-rest-seed)
-
 [boot]: https://projects.spring.io/spring-boot/
 [rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
 
