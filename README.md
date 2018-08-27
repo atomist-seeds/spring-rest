@@ -1,10 +1,10 @@
 # spring-rest-seed
 
-[boot]: https://projects.spring.io/spring-boot/
-[rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
-
 This project is a seed for creating [Spring Boot][boot] [REST][rest]
 service projects.
+
+[boot]: https://projects.spring.io/spring-boot/
+[rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
 
 ## Development
 
@@ -35,5 +35,5 @@ $ ./mvnw test
 Created by [Atomist][atomist].
 Need Help?  [Join our Slack team][slack].
 
-[atomist]: https://www.atomist.com/
-[slack]: https://join.atomist.com/
+[atomist]: https://www.atomist.com/ (Atomist - How Teams Deliver Software)
+[slack]: https://join.atomist.com/ (Atomist Community Slack Workspace)
