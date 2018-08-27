@@ -6,12 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
+import org.springframework.web.bind.annotation.GetMapping;
+
 @RestController
 class SpringRestSeedController {
 
-    @RequestMapping(method = GET, path = "hello/{name}")
+    @GetMapping(path = "hello/{name}")
     public String person(@PathVariable String name) {
         return "Hello " + name + "!";
+    }
+
+    @GetMapping(path = "/")
+    public String root() {
+        return "Welcome to hello world! Add /hello/there to the URL to get a friendly reply.";
     }
 
 }
