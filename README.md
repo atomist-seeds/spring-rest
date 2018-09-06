@@ -1,4 +1,4 @@
-# spring-rest-seed
+# spring-rest
 
 This project is a seed for creating [Spring Boot][boot] [REST][rest]
 service projects.
