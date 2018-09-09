@@ -5,7 +5,7 @@
 
 	<groupId>com.atomist</groupId>
 	<artifactId>spring-rest-seed</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>spring-rest-seed</name>
@@ -33,6 +33,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.atomist</groupId>
+			<artifactId>spring-boot-agent</artifactId>
+			<version>[2.0.0,3.0.0)</version>
+			<type>pom</type>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,5 +56,14 @@
 		</plugins>
 	</build>
 
-
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-atomist-atomist</id>
+			<name>bintray</name>
+			<url>https://dl.bintray.com/atomist/atomist</url>
+		</repository>
+	</repositories>
 </project>

@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.startsWith;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -24,6 +25,13 @@ public class SpringRestSeedControllerTests {
 		this.mockMvc.perform(get("/hello/Rod"))
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Hello Rod!")));
+	}
+
+	@Test
+	public void shouldReturnHelloWorld() throws Exception {
+		this.mockMvc.perform(get("/"))
+				.andExpect(status().isOk())
+				.andExpect(content().string(startsWith("Hello, world!")));
 	}
 
 	@Test
