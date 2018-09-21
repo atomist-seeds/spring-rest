@@ -31,7 +31,7 @@ public class SpringRestSeedControllerTests {
 	public void shouldReturnHelloWorld() throws Exception {
 		this.mockMvc.perform(get("/"))
 				.andExpect(status().isOk())
-				.andExpect(content().string(startsWith("Hello, world!")));
+				.andExpect(content().string(startsWith("Hello")));
 	}
 
 	@Test
