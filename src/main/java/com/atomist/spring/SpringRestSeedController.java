@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 class SpringRestSeedController {
 
-    @GetMapping(path = "hello/{name}")
+    @GetMapping("/hello/{name}")
     public String person(@PathVariable String name) {
         return "Hello " + name + "!";
     }
 
-    @GetMapping(path = "/")
+    @GetMapping("/")
     public String root() {
         return "Hello, world! Add /hello/there to the URL to get a friendly reply.";
     }
