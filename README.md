@@ -3,14 +3,14 @@
 This project is a seed for creating [Spring Boot][boot] [REST][rest]
 service projects.
 
-[boot]: https://projects.spring.io/spring-boot/
-[rest]: https://en.wikipedia.org/wiki/Representational_state_transfer
+[boot]: https://projects.spring.io/spring-boot/ (Spring Boot)
+[rest]: https://en.wikipedia.org/wiki/Representational_state_transfer (REST)
 
 ## Development
 
 This project is driven using [Maven][mvn].
 
-[mvn]: https://maven.apache.org/
+[mvn]: https://maven.apache.org/ (Maven)
 
 ### Run locally
 
